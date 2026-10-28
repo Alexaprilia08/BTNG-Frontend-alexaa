@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gridline Autos | Certified Cars Showroom</title>
+  <meta name="description" content="Browse certified new and pre-owned cars at Gridline Autos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="Kinetic Motors home">Gridline<span>Autos</span></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="menu" class="menu">
+        <a href="#cars">Collection</a>
+        <a href="#why">Why GA</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-sm" href="#contact">Book a test drive</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg" role="img" aria-label="Featured car photo"></div>
+
+      <div class="hero-inner">
+        <p class="kicker">Certified new &amp; pre-owned cars</p>
+        <h1>Find the car that fits your life.</h1>
+        <p class="lead">Every car in our showroom is inspected, openly priced and ready for a test drive. Browse, compare and book in minutes.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#cars">Browse cars</a>
+          <a class="btn btn-ghost" href="#contact">Book a test drive</a>
+        </div>
+        <dl class="stats" aria-live="polite">
+          <div><dd id="statTotal">-</dd><dt>Cars listed</dt></div>
+          <div><dd id="statAvail">-</dd><dt>Available now</dt></div>
+          <div><dd id="statBrands">-</dd><dt>Brands</dt></div>
+        </dl>
+      </div>
+
+      <div class="hero-bar" id="heroBar">
+        <div class="feat">
+          <span class="tag">Featured</span>
+          <strong id="heroName">Loading featured car</strong>
+          <span id="heroMeta"></span>
+        </div>
+        <b class="bar-price" id="heroPrice"></b>
+        <button class="btn btn-sm" type="button" id="heroView">View details</button>
+        <div class="thumbs" id="thumbs" role="group" aria-label="Choose featured car"></div>
+        <div class="ctrl">
+          <button type="button" id="heroPrev" aria-label="Previous car">&larr;</button>
+          <span id="heroCount" aria-live="polite">1 / 5</span>
+          <button type="button" id="heroNext" aria-label="Next car">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="cars">
+      <div class="section-head">
+        <h2>Our cars</h2>
+        <p id="resultCount" aria-live="polite">Loading cars...</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <span class="sr">Search cars</span>
+          <input id="search" type="search" placeholder="Search by name or brand" autocomplete="off">
+        </label>
+        <label class="select"><span class="sr">Fuel type</span>
+          <select id="fuel"><option value="all">All fuel types</option></select>
+        </label>
+        <label class="select"><span class="sr">Sort by</span>
+          <select id="sort">
+            <option value="new">Newest listed</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="year">Year: newest first</option>
+          </select>
+        </label>
+      </div>
+      <div class="chips" id="brandChips" role="group" aria-label="Filter by brand"></div>
+
+      <div class="grid" id="grid" aria-busy="true"></div>
+      <div class="state" id="state" hidden></div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="why-inner">
+        <h2>Buying a car should feel straightforward.</h2>
+        <div class="why-grid">
+          <article><h3>Inspected before listing</h3><p>Each car passes a multi-point check, so what you see online is what you see in person.</p></article>
+          <article><h3>Prices shown upfront</h3><p>The price on the card is the price we talk about. No surprise add-ons at the desk.</p></article>
+          <article><h3>Test drive on your schedule</h3><p>Pick a car, pick a time. An advisor will have it ready and parked out front.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+  <div class="footer-col">
+    <a class="logo" href="#top">Gridline<span>Autos</span></a>
+    <p class="footer-brand-desc">
+      Precision-tuned performance and track-inspired cars. Rigorously inspected, transparently priced, and built for the thrill of the drive.
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <p class="footer-heading">Explore</p>
+    <ul class="footer-links">
+      <li><a href="#cars">Collection</a></li>
+      <li><a href="#why">Why GA</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <p class="footer-heading">Contact</p>
+    <p>Jl. Braga No. 66, Bandung, West Java</p>
+    <p><a href="tel:+628818567674">+62 881–8567–674</a></p>
+    <p><a href="mailto:Gridlineautos@gmail.com">Gridlineautos@gmail.com</a></p>
+  </div>
+
+  <div class="copy">
+    <span>&copy; Gridline Autos. All rights reserved.</span>
+    <a href="#top" class="back-to-top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<dialog id="modal" aria-labelledby="mTitle">
+    <button class="close" id="mClose" aria-label="Close details">&times;</button>
+    <img id="mImg" alt="">
+    <div class="m-body">
+      <span class="badge" id="mStatus"></span>
+      <h3 id="mTitle"></h3>
+      <p class="m-price" id="mPrice"></p>
+      <dl class="specs" id="mSpecs"></dl>
+      <a class="btn" href="#contact" id="mCta">Book a test drive</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <script src="script.js"></script>
+</body>
+</html>
